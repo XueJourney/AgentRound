@@ -1,28 +1,50 @@
 AgentRound Licensing
+
+=====================================
 Open Source License
+=====================================
+
 AgentRound is licensed under the GNU Affero General Public License v3.0 (AGPLv3).
+
 You are free to:
-View, use, and modify the source code
-Distribute modified versions
+  - View, use, and modify the source code
+  - Distribute modified versions
+
 Under the following conditions:
-Any modified version or derivative work must be released under AGPLv3
-If you run a modified version as a network service, you must make the source code available to users
-You must include a link to the original source repository
+  - Any modified version or derivative work must be released under AGPLv3
+  - If you run a modified version as a network service, you must make the
+    source code available to users
+  - You must include a link to the original source repository
+
 Full license text: https://www.gnu.org/licenses/agpl-3.0.html
+
+=====================================
 Commercial License
+=====================================
+
 For commercial use (including but not limited to):
-Integrating AgentRound into proprietary/closed-source products
-Offering AgentRound as part of a paid service
-Using AgentRound in a commercial SaaS platform
-Any use that is incompatible with AGPLv3
+  - Integrating AgentRound into proprietary/closed-source products
+  - Offering AgentRound as part of a paid service
+  - Using AgentRound in a commercial SaaS platform
+  - Any use that is incompatible with AGPLv3
+
 You must obtain a commercial license from the author.
+
+=====================================
 Contact
+=====================================
+
 Author: 薛中泽 (Xue ZhongZe)
-GitHub: XueJourney - Overview
-Email: admin@xuejourney.xin
+GitHub: https://github.com/XueJourney
+Email:  admin@xuejourney.xin
+
+=====================================
 Summary
-Personal / Academic → AGPLv3 → Keep open source, link back
-Modification / Fork → AGPLv3 → Open source + link to original repo
-Network Service (SaaS) → AGPLv3 → Publish source code
-Commercial / Proprietary → Commercial License → Contact author for authorization
+=====================================
+
+  Personal / Academic    → AGPLv3             → Keep open source, link back
+  Modification / Fork    → AGPLv3             → Open source + link to original repo
+  Network Service (SaaS) → AGPLv3             → Publish source code
+  Commercial / Proprietary → Commercial License → Contact author for authorization
+
 Copyright (c) 2026 薛中泽 (Xue ZhongZe). All rights reserved.
