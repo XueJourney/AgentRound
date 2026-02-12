@@ -235,17 +235,83 @@ SYSTEM_PROMPT=你是 {model_name}，一位资深技术架构师。主题：{topi
 
 ```
 AgentRound/
-├── main.py            # 主程序
-├── .env.example       # 配置模板
-├── .env               # 你的配置（git ignored）
-├── requirements.txt   # 依赖
-├── discussions/       # Markdown 讨论记录
+├── main.py                    # 主程序入口
+├── app.py                     # 原单文件版本（已废弃，保留作参考）
+├── .env.example               # 配置模板
+├── .env                       # 你的配置（git ignored）
+├── requirements.txt           # 依赖
+├── TODO_list.md               # 待实现功能索引
+├── src/                       # 核心模块目录
+│   ├── __init__.py            # 包初始化
+│   ├── config.py              # 配置管理模块
+│   ├── logger.py              # 日志系统模块
+│   ├── prompts.py             # 提示词模板模块
+│   ├── token_manager.py       # Token计数和历史管理
+│   ├── api_client.py          # API客户端模块
+│   ├── ui.py                  # 用户界面模块
+│   ├── markdown_writer.py     # Markdown文件生成模块
+│   └── discussion.py          # 讨论编排模块
+├── discussions/               # Markdown 讨论记录
 │   └── 20250212_*.md
-├── log/               # 运行日志
+├── log/                       # 运行日志
 │   └── *_20250212.log
-├── assets/            # README 资源
+├── assets/                    # README 资源
 └── LICENSE
 ```
+
+### 🏗️ 模块化架构
+
+项目采用清晰的模块化设计，每个模块职责单一：
+
+| 模块 | 职责 | 主要功能 |
+|------|------|---------|
+| `config.py` | 配置管理 | 加载环境变量、验证配置、提供统一配置接口 |
+| `logger.py` | 日志系统 | 控制台+文件双输出、分级日志、按主题命名 |
+| `prompts.py` | 提示词管理 | 模板加载、变量替换、支持自定义 |
+| `token_manager.py` | Token管理 | Token计数、历史裁剪、成本估算 |
+| `api_client.py` | API客户端 | 模型列表获取、聊天请求、并发调用 |
+| `ui.py` | 用户界面 | Rich渲染、交互输入、统计展示 |
+| `markdown_writer.py` | 文档生成 | Markdown格式化、实时保存、双语支持 |
+| `discussion.py` | 讨论编排 | 流程控制、轮次管理、历史维护 |
+
+**架构优势**：
+- ✅ 代码结构清晰，易于理解和维护
+- ✅ 模块间低耦合，便于单元测试
+- ✅ 详细的中英双语注释和文档
+- ✅ 预留扩展接口，支持功能增强
+- ✅ 符合 SOLID 设计原则
+
+---
+
+## 🛠️ 开发指南
+
+### 代码规范
+
+- **注释要求**：所有模块、类、函数都需要详细的中英双语文档字符串
+- **日志记录**：使用 logger 记录关键操作和错误信息
+- **类型提示**：使用 Python 类型提示提高代码可读性
+- **错误处理**：合理使用异常处理，记录错误日志
+
+### 添加新功能
+
+1. 在对应模块中实现功能
+2. 更新 `TODO_list.md` 标记完成状态
+3. 添加必要的日志输出
+4. 更新文档和注释
+
+### 测试
+
+```bash
+# 运行主程序测试
+python main.py
+
+# 查看日志
+tail -f log/*.log
+```
+
+### 待实现功能
+
+查看 [TODO_list.md](TODO_list.md) 了解计划中的功能和改进项。
 
 ---
 
